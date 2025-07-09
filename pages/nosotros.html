@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce a Liliana Barrera y el equipo detrás de Mommy Eventos - Especialistas en eventos infantiles">
+    <script src="https://kit.fontawesome.com/da41e42b24.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/Main.css">
+    <title>Sobre Nosotros - Mommy Eventos</title>
+    <style>
+        .founder-section {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 4rem;
+        }
+        
+        .founder-img {
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .founder-img:hover {
+            transform: scale(1.02);
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .team-img {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .team-social a {
+            color: #00adf2;
+            transition: color 0.3s ease;
+        }
+        
+        .team-social a:hover {
+            color: #ec008b;
+        }
+        
+        .history-timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 1.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #00adf2;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0.5rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ec008b;
+            border: 3px solid #00adf2;
+        }
+        
+        .values-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            margin: 4rem 0;
+            border-radius: 10px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+            height: 100%;
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: #ec008b;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+            <div class="container-fluid" id="navbar-inner">
+              <div class="d-flex flex-row" id="logo-div">
+                <img src="../assets/images/logo.png" id="logo" alt="Logo Mommy Eventos">
+                <div class="d-flex flex-column" id="logo-text">
+                  <p class="fs-2 brand-name">Mommy Eventos</p>
+                  <p class="fs-6 brand-subtitle">by Liliana Barrera</p>
+                </div>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center fs-5" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+                  <a class="nav-link" href="catalogo.html"><i class="fas fa-book me-1"></i>Catálogo</a>
+                  <a class="nav-link" href="reservas.html"><i class="fas fa-calendar-check me-1"></i>Reservas</a>
+                  <a class="nav-link" href="galeria.html"><i class="fas fa-images me-1"></i>Galería</a>
+                  <a class="nav-link" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
+                  <a class="nav-link active" href="nosotros.html"><i class="fas fa-users me-1"></i>Nosotros</a>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <button class="btn btn-primary me-2"><i class="fas fa-sign-in-alt me-1"></i>Ingresar</button>
+                  <button class="btn btn-outline-primary"><i class="fas fa-user-plus me-1"></i>Registrarse</button>
+                </div>
+              </div>
+            </div>
+        </nav>
+        
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="bg-light py-2">
+            <div class="container">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Nosotros</li>
+                </ol>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="mb-3">Nuestra Historia</h1>
+            <p class="lead">Más de una década creando momentos mágicos para los más pequeños</p>
+        </div>
+        
+        <!-- Fundadora -->
+        <div class="founder-section">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <h2 class="mb-3">Liliana Barrera</h2>
+                    <p class="text-muted mb-4">Fundadora y Directora Creativa</p>
+                    
+                    <div class="mb-4">
+                        <p>Con más de 15 años de experiencia en organización de eventos infantiles, Liliana transformó su pasión por crear momentos especiales en Mommy Eventos, un referente en celebraciones mágicas para niños.</p>
+                        <p>"Mi objetivo siempre ha sido crear experiencias que los niños recuerden con alegría y que los padres atesoren para siempre. Cada evento es una oportunidad para dar vida a la imaginación."</p>
+                    </div>
+                    
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-award text-primary me-2"></i>
+                            <span>+500 eventos realizados</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-smile-beam text-primary me-2"></i>
+                            <span>+10,000 niños felices</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                    <img src="../assets/images/nosotros.jpg" class="img-fluid founder-img" alt="Liliana Barrera - Fundadora de Mommy Eventos">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nuestra Historia -->
+        <section class="mb-5">
+            <h2 class="text-center mb-5">Nuestra Trayectoria</h2>
+            
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <h4>2010 - Los Inicios</h4>
+                    <p>Mommy Eventos nació como un pequeño emprendimiento desde casa, con Liliana organizando fiestas para amigos y familiares. Su atención al detalle y creatividad pronto llamaron la atención.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2013 - Primer Local</h4>
+                    <p>Con una creciente clientela, abrimos nuestro primer showroom donde los clientes podían ver muestras de decoración y temáticas. Introdujimos nuestros primeros paquetes completos para eventos.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2016 - Expansión del Equipo</h4>
+                    <p>Contratamos a nuestros primeros colaboradores fijos: un diseñador de eventos y una coordinadora logística. Comenzamos a ofrecer servicios de animación y entretenimiento profesional.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2020 - Reinvención Digital</h4>
+                    <p>Durante la pandemia, desarrollamos un sistema de consultas virtuales y eventos en casa. Creamos kits de fiesta para llevar y mantenimos la magia en tiempos difíciles.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2023 - Actualidad</h4>
+                    <p>Hoy somos un equipo de 12 profesionales apasionados, con más de 50 temáticas disponibles y servicios premium. Seguimos innovando para superar las expectativas de nuestros clientes.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Nuestros Valores -->
+        <section class="values-section">
+            <div class="container">
+                <h2 class="text-center mb-5">Nuestros Valores</h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Pasión</h3>
+                            <p>Amamos lo que hacemos y eso se refleja en cada detalle. Nos emociona crear experiencias únicas que dejen recuerdos imborrables.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>Creatividad</h3>
+                            <p>Innovamos constantemente para ofrecer temáticas originales y soluciones personalizadas que superen las expectativas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <h3>Compromiso</h3>
+                            <p>Cada evento es único y lo tratamos con la dedicación que merece. Tu satisfacción es nuestra mayor recompensa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Nuestro Equipo -->
+        <section class="mb-5">
+            <h2 class="text-center mb-5">Conoce Nuestro Equipo</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="../assets/images/client1.jpg" class="team-img" alt="Diseñadora de Eventos">
+                        <div class="p-4">
+                            <h4>Camila Rodríguez</h4>
+                            <p class="text-muted">Diseñadora de Eventos</p>
+                            <p>Especialista en decoración temática y ambientación. Transforma espacios en mundos mágicos.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="../assets/images/client2.jpg" class="team-img" alt="Coordinador de Eventos">
+                        <div class="p-4">
+                            <h4>Andrés Gómez</h4>
+                            <p class="text-muted">Coordinador de Eventos</p>
+                            <p>Experto en logística y planificación. Se asegura de que todo funcione perfectamente el día del evento.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="../assets/images/tema1.jpg" class="team-img" alt="Animadora Infantil">
+                        <div class="p-4">
+                            <h4>Laura Martínez</h4>
+                            <p class="text-muted">Animadora Infantil</p>
+                            <p>Especialista en entretenimiento infantil. Crea juegos y actividades que mantienen a los niños felices y entretenidos.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="../assets/images/tema2.jpg" class="team-img" alt="Asesora de Clientes">
+                        <div class="p-4">
+                            <h4>María Fernández</h4>
+                            <p class="text-muted">Asesora de Clientes</p>
+                            <p>Tu guía en el proceso de planificación. Te ayuda a elegir la mejor opción para tu evento especial.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA -->
+        <div class="cta-section text-center py-5 bg-primary text-white rounded">
+            <h2 class="mb-4">¿Listo para crear un evento memorable?</h2>
+            <p class="lead mb-4">Nuestro equipo está listo para hacer realidad tus ideas</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="contacto.html" class="btn btn-light btn-lg">
+                    <i class="fas fa-envelope me-2"></i>Contáctanos
+                </a>
+                <a href="reservas.html" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-calendar-check me-2"></i>Reservar
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-logo d-flex align-items-center mb-3">
+                        <img src="../assets/images/logo.png" alt="Logo Mommy Eventos" class="footer-logo-img me-3">
+                        <div>
+                            <h5 class="brand-name mb-0">Mommy Eventos</h5>
+                            <p class="brand-subtitle mb-0">by Liliana Barrera</p>
+                        </div>
+                    </div>
+                    <p class="footer-text">Creando momentos mágicos e inolvidables para tus pequeños desde 2010.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Enlaces rápidos</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="../index.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Inicio</a></li>
+                        <li><a href="catalogo.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Catálogo</a></li>
+                        <li><a href="reservas.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Reservas</a></li>
+                        <li><a href="galeria.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Galería</a></li>
+                        <li><a href="contacto.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Contacto</h5>
+                    <ul class="footer-contact list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Av. Principal 123, Ciudad</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@mommyeventos.com</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright mb-0">&copy; 2023 Mommy Eventos. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="footer-legal-link">Términos y condiciones</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="footer-legal-link">Política de privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Main.js"></script>
+</body>
+</html>

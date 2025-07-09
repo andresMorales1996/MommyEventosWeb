@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de eventos infantiles - Mommy Eventos by Liliana Barrera">
+    <script src="https://kit.fontawesome.com/da41e42b24.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="../assets/styles/Main.css">
+    <title>Galería de Eventos - Mommy Eventos</title>
+    <style>
+        /* Estilos adicionales para corregir los problemas mencionados */
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-header h5 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .rating {
+            color: #FFD700; /* Color dorado para las estrellas */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+            <div class="container-fluid" id="navbar-inner">
+              <div class="d-flex flex-row" id="logo-div">
+                <img src="../assets/images/logo.png" id="logo" alt="Logo Mommy Eventos">
+                <div class="d-flex flex-column" id="logo-text">
+                  <p class="fs-2 brand-name">Mommy Eventos</p>
+                  <p class="fs-6 brand-subtitle">by Liliana Barrera</p>
+                </div>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center fs-5" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+                  <a class="nav-link" href="catalogo.html"><i class="fas fa-book me-1"></i>Catálogo</a>
+                  <a class="nav-link" href="reservas.html"><i class="fas fa-calendar-check me-1"></i>Reservas</a>
+                  <a class="nav-link active" href="galeria.html"><i class="fas fa-images me-1"></i>Galería</a>
+                  <a class="nav-link" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
+                  <a class="nav-link" href="nosotros.html"><i class="fas fa-users me-1"></i>Nosotros</a>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <button class="btn btn-primary me-2"><i class="fas fa-sign-in-alt me-1"></i>Ingresar</button>
+                  <button class="btn btn-outline-primary"><i class="fas fa-user-plus me-1"></i>Registrarse</button>
+                </div>
+              </div>
+            </div>
+        </nav>
+        
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="bg-light py-2">
+            <div class="container">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Galería</li>
+                </ol>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="mb-3">Nuestra Galería de Eventos</h1>
+            <p class="lead">Inspírate con los eventos que hemos realizado y descubre todo lo que podemos hacer por ti</p>
+            
+            <!-- Filtros de galería CORREGIDO -->
+            <div class="gallery-filter">
+                <button class="btn btn-outline-primary filter-btn active" onclick="filterGallery('all')">Todas</button>
+                <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('princesas')">Princesas</button>
+                <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('superheroes')">Superhéroes</button>
+                <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('animales')">Animales</button>
+                <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('espacio')">Espacio</button>
+                <button class="btn btn-outline-primary filter-btn" onclick="filterGallery('personalizados')">Personalizados</button>
+            </div>
+        </div>
+        
+        <!-- Galería -->
+        <div class="row g-4 gallery-grid">
+            <!-- Item 1 - Princesas -->
+            <div class="col-lg-4 col-md-6 gallery-item princesas">
+                <div class="gallery-card position-relative overflow-hidden rounded">
+                    <a href="../assets/images/carousel1.jpg" data-lightbox="gallery" data-title="Fiesta de Princesas - Cumpleaños de Valentina" class="gallery-link">
+                        <img src="../assets/images/carousel1.jpg" class="img-fluid gallery-img" alt="Fiesta de princesas">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5 class="gallery-title">Fiesta de Princesas</h5>
+                                <p class="gallery-desc">Cumpleaños de Valentina - 5 años</p>
+                                <span class="badge bg-pink">Temática Princesas</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 2 - Superhéroes -->
+            <div class="col-lg-4 col-md-6 gallery-item superheroes">
+                <div class="gallery-card position-relative overflow-hidden rounded">
+                    <a href="../assets/images/carousel2.jpg" data-lightbox="gallery" data-title="Aventura de Superhéroes - Cumpleaños de Santiago" class="gallery-link">
+                        <img src="../assets/images/carousel2.jpg" class="img-fluid gallery-img" alt="Fiesta de superhéroes">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5 class="gallery-title">Aventura de Superhéroes</h5>
+                                <p class="gallery-desc">Cumpleaños de Santiago - 6 años</p>
+                                <span class="badge bg-primary">Temática Superhéroes</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 3 - Animales -->
+            <div class="col-lg-4 col-md-6 gallery-item animales">
+                <div class="gallery-card position-relative overflow-hidden rounded">
+                    <a href="../assets/images/tema3.jpg" data-lightbox="gallery" data-title="Safari de Animales - Cumpleaños de Sofía y Mateo" class="gallery-link">
+                        <img src="../assets/images/tema3.jpg" class="img-fluid gallery-img" alt="Fiesta de animales">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5 class="gallery-title">Safari de Animales</h5>
+                                <p class="gallery-desc">Cumpleaños de Sofía y Mateo - 4 años</p>
+                                <span class="badge bg-success">Temática Animales</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 4 - Espacio -->
+            <div class="col-lg-4 col-md-6 gallery-item espacio">
+                <div class="gallery-card position-relative overflow-hidden rounded">
+                    <a href="../assets/images/tema4.jpg" data-lightbox="gallery" data-title="Aventura Espacial - Cumpleaños de Daniel" class="gallery-link">
+                        <img src="../assets/images/tema4.jpg" class="img-fluid gallery-img" alt="Fiesta espacial">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5 class="gallery-title">Aventura Espacial</h5>
+                                <p class="gallery-desc">Cumpleaños de Daniel - 7 años</p>
+                                <span class="badge bg-secondary">Temática Espacio</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 5 - Personalizado -->
+            <div class="col-lg-4 col-md-6 gallery-item personalizados">
+                <div class="gallery-card position-relative overflow-hidden rounded">
+                    <a href="../assets/images/productos.jpg" data-lightbox="gallery" data-title="Fiesta de Dinosaurios - Cumpleaños de Lucas" class="gallery-link">
+                        <img src="../assets/images/productos.jpg" class="img-fluid gallery-img" alt="Fiesta personalizada">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5 class="gallery-title">Aventura Jurásica</h5>
+                                <p class="gallery-desc">Cumpleaños de Lucas - 5 años</p>
+                                <span class="badge bg-warning text-dark">Temática Personalizada</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 6 - Princesas -->
+            <div class="col-lg-4 col-md-6 gallery-item princesas">
+                <div class="gallery-card position-relative overflow-hidden rounded">
+                    <a href="../assets/images/galeria.jpg" data-lightbox="gallery" data-title="Fiesta de Princesas - Cumpleaños de Isabella" class="gallery-link">
+                        <img src="../assets/images/galeria.jpg" class="img-fluid gallery-img" alt="Fiesta de princesas">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5 class="gallery-title">Reino Encantado</h5>
+                                <p class="gallery-desc">Cumpleaños de Isabella - 4 años</p>
+                                <span class="badge bg-pink">Temática Princesas</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonios CORREGIDO (sin imágenes) -->
+        <section class="testimonials-section mt-5 py-5 bg-light rounded">
+            <div class="container">
+                <h2 class="text-center mb-5">Lo que dicen nuestros clientes</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="testimonial-card p-4 h-100">
+                            <div class="testimonial-header">
+                                <h5>María González</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"La fiesta de princesas para mi hija fue increíble. Cada detalle estaba perfecto y las fotos muestran lo mágico que fue todo. ¡Superaron todas nuestras expectativas!"</p>
+                            <a href="princesas" class="btn btn-sm btn-outline-primary">Ver fotos</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="testimonial-card p-4 h-100">
+                            <div class="testimonial-header">
+                                <h5>Carlos Mendoza</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"La temática de superhéroes que crearon para el cumple de mi hijo fue espectacular. Los niños no paraban de jugar y las fotos quedaron increíbles."</p>
+                            <a href="superheroes" class="btn btn-sm btn-outline-primary">Ver fotos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA -->
+        <div class="cta-section text-center py-5 mt-5 bg-primary text-white rounded">
+            <h2 class="mb-4">¿Listo para crear tu evento perfecto?</h2>
+            <p class="lead mb-4">Inspírate con nuestra galería y reserva tu temática favorita</p>
+            <a href="reservas.html" class="btn btn-light btn-lg">
+                <i class="fas fa-calendar-check me-2"></i>Reservar ahora
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-logo d-flex align-items-center mb-3">
+                        <img src="../assets/images/logo.png" alt="Logo Mommy Eventos" class="footer-logo-img me-3">
+                        <div>
+                            <h5 class="brand-name mb-0">Mommy Eventos</h5>
+                            <p class="brand-subtitle mb-0">by Liliana Barrera</p>
+                        </div>
+                    </div>
+                    <p class="footer-text">Creando momentos mágicos e inolvidables para tus pequeños desde 2010.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Enlaces rápidos</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="../index.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Inicio</a></li>
+                        <li><a href="catalogo.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Catálogo</a></li>
+                        <li><a href="reservas.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Reservas</a></li>
+                        <li><a href="galeria.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Galería</a></li>
+                        <li><a href="contacto.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Contacto</h5>
+                    <ul class="footer-contact list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Av. Principal 123, Ciudad</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@mommyeventos.com</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright mb-0">&copy; 2023 Mommy Eventos. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="footer-legal-link">Términos y condiciones</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="footer-legal-link">Política de privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="../Main.js"></script>
+    <script>
+        // Configuración de lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': 'Imagen %1 de %2',
+            'positionFromTop': 100
+        });
+        
+        // Función para filtrar la galería CORREGIDA
+        function filterGallery(category) {
+            // Actualizar botones activos
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.trim() === 'Todas' && category === 'all') {
+                    btn.classList.add('active');
+                } else if (btn.textContent.trim().toLowerCase().includes(category)) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Filtrar elementos
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        // Animación al hacer scroll
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.gallery-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Ejecutar al cargar la página
+    </script>
+</body>
+</html>

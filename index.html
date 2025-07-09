@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mommy Eventos - Organización de eventos infantiles by Liliana Barrera">
+    <script src="https://kit.fontawesome.com/da41e42b24.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./assets/styles/Main.css">
+    <title>Mommy Eventos - Inicio</title>
+    <style>
+        /* Corrección para el texto del carrusel */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            bottom: 40%;
+            transform: translateY(50%);
+        }
+        
+        .carousel-caption h5 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: none;
+            color: white;
+        }
+        
+        .carousel-caption p {
+            font-size: 1.2rem;
+            text-shadow: none;
+            color: white;
+        }
+        
+        .carousel-caption .btn {
+            margin-top: 15px;
+        }
+        
+        /* Ajustes para móviles */
+        @media (max-width: 768px) {
+            .carousel-caption {
+                bottom: 20px;
+                transform: none;
+                padding: 15px;
+            }
+            
+            .carousel-caption h5 {
+                font-size: 1.3rem;
+            }
+            
+            .carousel-caption p {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+            <div class="container-fluid" id="navbar-inner">
+              <div class="d-flex flex-row" id="logo-div">
+                <img src="./assets/images/logo.png" id="logo" alt="Logo Mommy Eventos">
+                <div class="d-flex flex-column" id="logo-text">
+                  <p class="fs-2 brand-name">Mommy Eventos</p>
+                  <p class="fs-6 brand-subtitle">by Liliana Barrera</p>
+                </div>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center fs-5" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i>Inicio</a>
+                  <a class="nav-link" href="pages/catalogo.html"><i class="fas fa-book me-1"></i>Catálogo</a>
+                  <a class="nav-link" href="pages/reservas.html"><i class="fas fa-calendar-check me-1"></i>Reservas</a>
+                  <a class="nav-link" href="pages/galeria.html"><i class="fas fa-images me-1"></i>Galería</a>
+                  <a class="nav-link" href="pages/contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
+                  <a class="nav-link" href="pages/nosotros.html"><i class="fas fa-users me-1"></i>Nosotros</a>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a href="pages/login.html" class="btn btn-primary me-2">
+  <i class="fas fa-sign-in-alt me-1"></i>Ingresar
+</a>
+<a href="pages/registro.html" class="btn btn-outline-primary">
+  <i class="fas fa-user-plus me-1"></i>Registrarse
+</a>
+
+                </div>
+              </div>
+            </div>
+        </nav>
+        
+        <!-- Carrusel de imágenes CORREGIDO -->
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/images/carousel1.jpg" class="d-block w-100" alt="Evento infantil 1">
+                <div class="carousel-caption d-md-block">
+                  <h5 class="animate__animated animate__fadeInDown">Celebra los momentos especiales</h5>
+                  <p class="animate__animated animate__fadeInUp">Diseñamos eventos mágicos para los más pequeños</p>
+                  <a href="pages/reservas.html" class="btn btn-pink animate__animated animate__zoomIn">Reservar ahora</a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/carousel2.jpg" class="d-block w-100" alt="Evento infantil 2">
+                <div class="carousel-caption d-md-block">
+                  <h5 class="animate__animated animate__fadeInDown">Temáticas creativas</h5>
+                  <p class="animate__animated animate__fadeInUp">Personaliza tu evento con nuestras ideas únicas</p>
+                  <a href="pages/catalogo.html" class="btn btn-pink animate__animated animate__zoomIn">Ver temáticas</a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/carousel3.jpg" class="d-block w-100" alt="Evento infantil 3">
+                <div class="carousel-caption d-md-block">
+                  <h5 class="animate__animated animate__fadeInDown">Reserva con anticipación</h5>
+                  <p class="animate__animated animate__fadeInUp">Asegura tu fecha para la mejor experiencia</p>
+                  <a href="pages/reservas.html" class="btn btn-pink animate__animated animate__zoomIn">Consultar fechas</a>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Resto del contenido de la página de inicio -->
+    <!-- ... -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Main.js"></script>
+</body>
+</html>
