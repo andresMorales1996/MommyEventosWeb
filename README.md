@@ -1,81 +1,82 @@
-# 🎉 Mommy Eventos - Página Web de Eventos Infantiles
+# Mommy Eventos - Plataforma Web para Eventos Infantiles
 
-Sitio web diseñado para **Mommy Eventos**, empresa dedicada a la organización de eventos infantiles personalizados, liderada por Liliana Barrera. La plataforma permite a los usuarios explorar temáticas, reservar fechas, ver la galería de eventos y contactar al equipo de Mommy Eventos.
+Bienvenido al repositorio del proyecto **Mommy Eventos**, una plataforma para gestionar reservas, consultar catálogos temáticos, ver galerías, contactar al equipo organizador y mucho más.
 
+---
 
-## 📁 Estructura del Proyecto
+## 🚀 Tecnologías utilizadas
 
+* HTML5 + CSS3
+* Bootstrap 5.3
+* JavaScript Vanilla (ES6)
+* Animate.css y Flatpickr
+* Netlify (hosting y funciones opcionales)
+* EmailJS / Formspree (contacto)
+
+---
+
+## 📂 Estructura del proyecto
+
+```
 mommy-eventos/
 ├── index.html
 ├── pages/
-│ ├── catalogo.html
-│ ├── reservas.html
-│ ├── galeria.html
-│ ├── contacto.html
-│ ├── nosotros.html
-│ ├── login.html
-│ └── registro.html
+│   ├── catalogo.html
+│   ├── reservas.html
+│   ├── contacto.html
+│   ├── galeria.html
+│   ├── nosotros.html
 ├── assets/
-│ ├── images/
-│ │ └── (logotipo, carrusel, galería, etc.)
-│ └── styles/
-│ └── Main.css
+│   ├── images/
+│   ├── styles/
+│   │   └── Main.css
+├── netlify/functions/ (opcional)
+│   └── sendEmail.js
 ├── Main.js
-├── README.md
-└── ...
-
-## 🚀 Funcionalidades Principales
-
-- ✅ **Página de inicio** con carrusel de imágenes y llamadas a la acción.
-- 📚 **Catálogo** de temáticas personalizadas.
-- 📆 **Formulario de reservas** con validación y resumen dinámico.
-- 🖼️ **Galería** de fotos con lightbox.
-- 📩 **Formulario de contacto**.
-- 👩‍💼 **Sección sobre nosotros**.
-- 🔐 **Formulario de login y registro**.
-- 📱 **Responsive** con Bootstrap 5.
-- 💬 **Botón flotante de WhatsApp**.
+└── README.md
+```
 
 ---
 
-## 🧰 Tecnologías utilizadas
+## 🔗 URLs desplegadas
 
-- HTML5
-- CSS3
-- JavaScript
-- [Bootstrap 5](https://getbootstrap.com)
-- [Font Awesome](https://fontawesome.com)
-- [Flatpickr](https://flatpickr.js.org) (para selector de fecha)
-- Animate.css
+| Módulo              | URL                                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Sitio Web Principal | [https://mommyeventos.netlify.app](https://mommyeventos.netlify.app)                                         |
+| Reservas            | [https://mommyeventos.netlify.app/pages/reservas.html](https://mommyeventos.netlify.app/pages/reservas.html) |
+| Catálogo            | [https://mommyeventos.netlify.app/pages/catalogo.html](https://mommyeventos.netlify.app/pages/catalogo.html) |
+| Contacto            | [https://mommyeventos.netlify.app/pages/contacto.html](https://mommyeventos.netlify.app/pages/contacto.html) |
 
 ---
 
-## 🛠️ Instrucciones de uso
+## 💾 Instalación local
 
-1. **Clona el repositorio:**
+1. Clona el repositorio:
 
-   ```bash
-   git clone https://github.com/tuusuario/mommy-eventos.git
-   cd mommy-eventos
-Abre el archivo index.html en tu navegador:
+```bash
+git clone git@github.com:andresMorales1996/MommyEventosWeb.git
+```
 
-Puedes usar Live Server en VSCode o abrir directamente con doble clic.
+2. Abre con Live Server o tu navegador local.
 
-✅ Pendientes y mejoras sugeridas
- Integración con base de datos para guardar reservas.
+3. Opcional (si usas funciones con Vite o Netlify):
 
- Envío de correos automáticos de confirmación.
+```bash
+npm install
+npm run dev
+```
 
- Panel de administración para gestionar eventos.
+---
 
- Validación y autenticación de usuarios (Firebase o backend propio).
+## 📚 Documentación adicional
 
- Multilenguaje (español / inglés).
+* [DOCUMENTACION.md](./DOCUMENTACION.md)
+* [PRUEBAS.md](./PRUEBAS.md)
+* [MANUAL\_TECNICO.md](./MANUAL_TECNICO.md)
 
-🧑‍💻 Autora del Proyecto
-Liliana Barrera
-Instagram: @mommyeventos
-Correo: info@mommyeventos.com
+---
 
-📄 Licencia
-Este proyecto es de uso educativo y personal. Todos los derechos de imágenes, logotipos y marca pertenecen a Mommy Eventos.
+## 📄 Licencia
+
+Este proyecto es para fines educativos. Prohibida su distribución comercial sin autorización de Liliana Barrera.
+
